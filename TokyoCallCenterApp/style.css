@@ -1,0 +1,74 @@
+/* CSSのリセット（消さないでください） */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+/* ここからスタイル設定 */
+a {
+    text-decoration: none;
+}
+
+header {
+    margin: 50px;
+}
+header h1 {
+    color: blueviolet;
+}
+main {
+    margin: 0 50px;
+}
+footer {
+    margin: 50px;
+    color: blueviolet;
+}
+
+#question_description {
+    margin-bottom: 40px;
+}
+
+#question_text {
+    margin-bottom: 30px;
+    max-width: 1200px;
+}
+
+#isAnswer {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#answer {
+    margin-bottom: 5px;
+}
+
+.btns {
+    margin: 30px 0px;
+}
+
+#question_id {
+    margin-bottom: 10px;
+}
+
+#question_count {
+    margin: 10px 0;
+}
+
+/* 要素を無理やり横並びにする */
+.selections, .question_id_area{
+    display: flex;
+}
+.selections p, .question_id_area p{
+    margin-right: 5px;
+}
