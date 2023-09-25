@@ -1,10 +1,4 @@
-// データをシャッフルするロジック（ChatGPT）
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
+import shuffleArray from "./shuffle.js";
 
 // 定数questionsにシャッフルされたデータを格納する
 const getApiData = () => {
