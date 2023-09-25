@@ -1,0 +1,168 @@
+/* 基本のフォントとテキストカラー */
+body {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 16px;
+    color: #4b0082;
+    font-weight: 200;
+}
+
+/* ページの背景 */
+.work-container {
+    background-color: #f8f8ff;
+    padding: 20px;
+}
+
+/* 説明文 */
+.question_description {
+    margin-bottom: 20px;
+}
+
+/* 問題番号 */
+.question-number {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: cursive;
+    border-bottom: #4b0082 solid 3px;
+    padding: 0 10px;
+}
+
+/* 問題文 */
+.question-text {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+
+/* 解答選択肢 */
+.answer-selection {
+    margin-bottom: 30px;
+    border: none;
+    padding: 0 10px;
+}
+.answer-selection ul li {
+    margin-bottom: 10px;
+}
+
+/* ラジオボタンスタイル */
+.answer-selection ul li label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    position: relative;
+    margin-bottom: 0.4em;
+    padding: 0.5em 0.7em;
+    border: 1px solid #2589d0;
+    border-radius: 3px;
+    background-color: #2589d026;
+    cursor: pointer;
+}
+.answer-selection ul li label:has(:checked) { 
+    background-color: #2589d0;
+    color: #fff;
+}
+.answer-selection ul li label::before,
+.answer-selection ul li label:has(:checked)::after {
+    border-radius: 50%;
+    content: '';
+}
+.answer-selection ul li label::before {
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+}
+.answer-selection ul li label:has(:checked)::after {
+    position: absolute;
+    top: 50%;
+    left: calc(7px + 0.7em);
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    background-color: #2589d0;
+}
+.answer-selection input {
+    display: none;
+}
+
+/* 解答ボタン */
+.isAnswer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.isAnswer button {
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #f8f8ff;
+    background-color: #4b0082;
+    border-radius: 100vh;
+}
+.isAnswer button:hover {
+    background-color: #27acd9;
+    transform: translateY(3px);
+    transition: 0.2s;
+}
+
+/* 結果表示 */
+.answer-valid {
+    border-bottom: #4b0082 solid 3px;
+    padding: 10px 10px;
+    font-size: 32px;
+    font-family: cursive;
+}
+
+/* 解答表示 */
+.answer {
+    padding: 10px;
+}
+.description {
+    padding: 0 10px;
+}
+.description p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* データ更新ボタン */
+.btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btns button {
+    height: 40px;
+    width: 150px;
+    border-radius: 100vh;
+    background-color: #4b0082;
+    margin: 0 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: cursive;
+    font-weight: 600;
+}
+.btns button:hover {
+    background-color: #2589d0;
+    transform: translateY(3px);
+    transition: 0.2s;
+}
+
+/* 最下層データのスタイル */
+.bottom-contents {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.bottom-contents div a:hover {
+    color: #4b0082;
+}
+
+/* hidden設定 */
+.hidden {
+    visibility: hidden;
+}
