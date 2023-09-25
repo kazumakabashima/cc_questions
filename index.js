@@ -1,64 +1,38 @@
-<!DOCTYPE html>
-<html><!-- from index.html -->
-    <head><!-- from head -->
-        <!-- metadata -->
-        <meta charset="utf-8">
-        <title>TokyoCallCenterApp</title>
+// heroのフォーム要素を取得して返す
+const getHeroElements = () => {
+    const elementsWithSeatNumber = document.getElementById('seat-num');
+    const elementsWithQuestionCount = document.getElementById('question_count');
+    const elementsWithStartButton = document.getElementById('stat-btn');
+    return {
+        elementsWithSeatNumber,
+        elementsWithQuestionCount,
+        elementsWithStartButton,
+    };
+};
 
-        <!-- import -->
-        <script src="index.js" type="module"></script>
-        <link rel="stylesheet" href="css/style.css">
+// スタートボタンがclickされたときに実行する関数
+const startButtonClick = (elements) => {    
+    const questionCount = elements.elementsWithQuestionCount.value;
 
-        <!-- google font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+1p&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    if (questionCount === "") {
+        alert("出題数を選択してください。");
+    } else {
+        const seatNumber = elements.elementsWithSeatNumber.value;
+        const heroData = {seatNumber: seatNumber, questionCount: questionCount };
+        // JSONを文字列に変換してURLパラメータに追加
+        const heroDataString = JSON.stringify(heroData);
+        // encodeURIComponentを使用して特殊文字をエンコード
+        const encodedHeroData = encodeURIComponent(heroDataString);
+        // 新しいURLを生成して遷移
+        location.href = `/work.html?heroData=${encodedHeroData}`;
+    };
+};
 
-    </head><!-- upto head -->
-    
-    <body><!-- from body -->
-        <header>
-            <div class="header">
-                <p>TOKYO CALL CENTER</p>
-                <nav>
-                    <ul>
-                        <li></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        
-        <main>
-            <div class="hero-container">
-                <section>
-                    <div class="hero-contents">
-                        <h1 class="hero-text">練習問題</h1>
-                        <p class="hero-list-title">操作方法</p>
-                        <ul>
-                            <li>座席番号を入力</li>
-                            <li>出題数を選択</li>
-                            <li>問題を解くをクリック</li>
-                            <li>解答にチェックを入れて答えを確認する</li>
-                            <li>次の問題をクリック</li>
-                            <li>選択出題数の問題が出題されて終了</li>
-                        </ul>
-                        <div class="hero-forms">
-                            <input type="text" id="seat-num" placeholder="座席番号を入力" class="hero-form input-form">
-                            <select id="question_count" class="hero-form select-form">
-                                <option value="" disabled selected style="display:none;">出題数を選択</option>
-                                <option value="10">10</option>
-                            </select>
-                            <button type="button" id="stat-btn" class="hero-form stat-btn">問題を解く</button>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
 
-        <footer>
-            <div class="footer">
-                <p>Version 1.0.0 -- Released on September 23, 2023</p>
-            </div>
-        </footer>
-    </body><!-- upto body -->
-</html><!-- upto index.html -->
+// ページの読み込みが完了したときに実行する関数
+window.addEventListener('DOMContentLoaded', function() {
+    const heroElements = getHeroElements();
+    heroElements.elementsWithStartButton.addEventListener('click', function() {
+        startButtonClick(heroElements);
+    });
+});
