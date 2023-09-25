@@ -2,7 +2,7 @@ import getHeroData from './JavaScript/getHeroData.js';
 import getQuestions from './JavaScript/getQuestions.js';
 import getElements from './JavaScript/getElement.js';
 import changeElements from './JavaScript/changeElement.js';
-import validateAnswer from './validateAnswer.js';
+import validateAnswer from './JavaScript/validateAnswer.js';
 
 
 // getQuestions 関数を questionPreference 関数内に移動
