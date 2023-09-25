@@ -59,7 +59,7 @@ footer
 index.style 
 */
 .hero-container {
-    background-image: url(/images/hero.jpg);
+    background-image: url("https://github.com/kazumakabashima/cc_questions/blob/main/hero.jpg?raw=true");
     background-size: cover;
     display: flex;
     justify-content: center;
