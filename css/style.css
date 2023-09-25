@@ -1,0 +1,171 @@
+/* CSSのリセット（消さないでください） */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #9E76B4;
+}
+
+/* ここからスタイル設定 */
+
+/* 
+header style 
+*/
+.header {
+    height: 80px;
+    background-color: #C77EB5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px; /* パディングを縮小 */
+}
+.header p {
+    font-size: 36px; /* フォントサイズを調整 */
+    font-weight: 600;
+    font-family: cursive;
+    color: #FFFFFF;
+}
+
+/* 
+footer 
+*/
+.footer {
+    height: 40px;
+    background-color: #C77EB5;
+}
+.footer p {
+    color: #FFFFFF;
+    font-family: cursive;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* 
+index.style 
+*/
+.hero-container {
+    background-image: url(/images/hero.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px; /* 最低の高さを指定 */
+}
+.hero-contents {
+    background-color: rgba(199, 126, 181, 0.8);
+    min-height: 400px; /* 最低の高さを指定 */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px; /* マージンを縮小 */
+    padding: 40px; /* パディングを縮小 */
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #FFFFFF;
+}
+.hero-text {
+    font-size: 36px; /* フォントサイズを調整 */
+    border-bottom: #FFFFFF solid 2px;
+    padding: 10px;
+}
+.hero-list-title {
+    font-size: 24px; /* フォントサイズを調整 */
+    margin: 20px 0 0 20px; /* マージンを縮小 */
+}
+.hero-contents ul {
+    margin: 15px 0 0 20px; /* マージンを縮小 */
+}
+.hero-contents ul li {
+    font-size: 18px; /* フォントサイズを調整 */
+    list-style: decimal;
+    list-style-position: inside;
+    margin-bottom: 15px; /* マージンを縮小 */
+}
+.hero-forms {
+    margin: 20px 0 0 20px; /* マージンを縮小 */
+    display: flex;
+    flex-direction: column; /* カラムに表示 */
+}
+.hero-form {
+    box-sizing: border-box; 
+    height: 50px;
+    padding: 0 20px;
+    margin-bottom: 20px; /* マージンを縮小 */
+    border-radius: 100vh;
+    border: #C77EB5 solid 3px;
+    color: #758492;
+    background-color: #FFFFFF;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.hero-form:hover {
+    transition: 0.5s;
+    transform: translateY(3px);
+    border-color: #27acd9;
+}
+.hero-form:focus {
+    outline:#27acd9 1px solid;
+    border-color: #27acd9;
+}
+.stat-btn {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: #27acd9;
+    border-bottom: 2px solid #27acd9;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+    margin-bottom: 20px; /* マージンを縮小 */
+}
+
+@media screen and (max-width: 768px) {
+    /* スクリーン幅が768px以下の場合のスタイル */
+    .header p {
+        font-size: 28px;
+    }
+    .hero-contents {
+        font-size: 24px;
+        padding: 30px;
+    }
+    .hero-text {
+        font-size: 28px;
+    }
+    .hero-list-title {
+        font-size: 22px;
+        margin: 15px 0 0 15px;
+    }
+    .hero-contents ul {
+        margin: 10px 0 0 15px;
+    }
+    .hero-contents ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .hero-forms {
+        margin: 15px 0 0 15px;
+    }
+    .hero-form {
+        height: 40px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .stat-btn {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}
