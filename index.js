@@ -24,7 +24,7 @@ const startButtonClick = (elements) => {
         // encodeURIComponentを使用して特殊文字をエンコード
         const encodedHeroData = encodeURIComponent(heroDataString);
         // 新しいURLを生成して遷移
-        location.href = `/work.html?heroData=${encodedHeroData}`;
+        location.href = `https://kazumakabashima.github.io/cc_questions/work.html?heroData=${encodedHeroData}`;
     };
 };
 
